@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/compare.js", "use": "@vercel/node" }
-  ],
   "routes": [
-    { "src": "/api/compare", "dest": "api/compare.js" }
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/compare.js"
+    }
   ]
 }
